@@ -1,0 +1,81 @@
+// static public function lien()
+// {
+// 	// if($_GET['c'] == NULL || $_GET['c'] == '')
+// 	// {
+// 	// 	$_GET['c'] = 'AppControler';
+//     //
+// 	// 	if($_GET['a'] == NULL || $_GET['a'] == '')
+// 	// 	{
+// 	// 		$_GET['a'] = 'indexAction';
+// 	// 	}
+// 	// }
+// 	$url = explode('/', $_SERVER["REQUEST_URI"]);
+// 	echo "\n";
+// 	foreach($url as $donnees => $value)
+// 	{
+// 		if($value == 'index.php')
+// 		{
+// 			unset($url[$donnees]);
+// 			$url = array_values($url);
+// 		}
+// 		if(isset($url[2]) && $url[2] != '')
+// 		{
+// 			$controller = $url[2];
+//
+// 			if(isset($url[3]) && $url[3] != '')
+// 			{
+// 				$action = $url[3];
+// 			}
+// 			else
+// 			{
+// 				$action = 'indexAction()';
+// 			}
+// 		}
+// 		else
+// 		{
+// 			$controller = 'AppControler()';
+// 		}
+// 	}
+// 	var_dump($controller);
+// 	echo "</br>++++++++++++</br>";
+// 	// try
+// 	// {
+// 	// 	$user = new \src\Controller\$controller;
+// 	// 	$user->$action;
+// 	// }
+// 	// catch (Exception  $e)
+// 	// {
+// 	// 	echo 'Exception reçue : ',  $e->getMessage(), "\n";
+// 	// }
+// 	var_dump($url);
+// 	$_SERVER["REQUEST_URI"] = implode('/',$url);
+// 	var_dump($_SERVER["REQUEST_URI"]);
+// 	if(isset($_GET['c']) && isset($_GET['a']))
+// 	{
+// 		switch($_GET['c'])
+// 		{
+// 			case 'user' :
+// 				$user = new \src\Controller\UserControler();
+// 				break;
+//
+// 			case '' || empty($_GET) == true :
+// 				$user = new \src\Controller\AppControler();
+// 				break;
+// 		}
+//
+// 		switch($_GET['a'])
+// 		{
+// 			case 'add' :
+// 				$user->addAction();
+// 				break;
+//
+// 			default :
+// 				$user->indexAction();
+// 				break;
+// 		}
+// 	}
+// 	else
+// 	{
+// 		require('src/View/Error/404.php');
+// 	}
+// }
